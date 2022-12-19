@@ -1,0 +1,362 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+header nav{
+    position: fixed;
+    width: 100%;
+    height: 2.5em;
+    background-color: #f00;
+    display: flex;
+    outline: 1px solid rgb(255, 248, 118);
+    z-index: 20;
+}
+
+header nav a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #fff;
+    align-self: center;
+    margin: auto;
+    display: flex;
+    font-family: 'Roboto Slab', serif;
+}
+
+header nav a i {
+    font-size: 0.8em;
+    align-self: center;
+    margin: 0 5px;
+    z-index: 100;
+}
+
+.bolas{
+    display: flex;
+}
+
+
+.bola{
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+    top: 2.5em;
+}
+
+.bola:first-child{
+    width: 50px;
+    right: 5%;
+    animation-name: movimiento;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.bola:nth-child(2){
+    width: 50px;
+    right: 20%;
+    animation-name: movimientolargo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.bola:nth-child(3){
+    width: 50px;
+    right: 35%;
+    animation-name: movimiento;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 250ms;
+}
+
+.coco{
+    position: absolute;
+    width: 90px;
+    right: 45%;
+    z-index: 2;
+    top: 2.5em;
+    animation-name: movimiento;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 500ms;
+}
+
+.bola:nth-child(4){
+    width: 50px;
+    right: 65%;
+    animation-name: movimiento;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 750ms;
+}
+
+.bola:nth-child(5){
+    width: 50px;
+    right: 80%;
+    animation-name: movimientolargo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 500ms;
+}
+
+@keyframes movimientolargo {
+    0%{
+        top:0;
+        filter: drop-shadow(0 0 10px #fff);
+    }
+    50%{
+        top:2em;
+        filter: drop-shadow(0 0 10px rgb(229, 255, 0));
+    }
+    100%{
+        top:0;
+        filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+    }
+}
+
+@keyframes movimiento {
+    0%{
+        top:2.5em;
+        filter: drop-shadow(0 0 10px #fff);
+    }
+    50%{
+        top:1.5em;
+        filter: drop-shadow(0 0 10px rgb(229, 255, 0));
+    }
+    100%{
+        top:2.5em;
+        filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+    }
+}
+
+
+h1{
+    position: absolute;
+    top: 20%;
+    z-index: 3;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-family: 'Neonderthaw', cursive;
+    font-weight: 1;
+    font-size: 4em;
+    animation-name: letras;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    user-select: none;
+    filter: drop-shadow(0 0 10px #fff);
+    letter-spacing: 1px;
+}
+
+@keyframes letras {
+
+    0%{
+        opacity: 0.5;
+    }
+    1%{
+        opacity: 1;
+    }
+
+    34%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0.3;
+    }
+    36%{
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+    91% {
+        opacity: 0.7;
+    }
+    92% {
+        opacity: 1;
+    }
+}
+
+
+.arbol{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/arbol.gif);
+    background-position: -250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.regalo-delante{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    background: rgb(174, 0, 0);
+    bottom: 3.4em;
+    display: flex;
+    overflow: hidden;
+    border: none;
+    z-index: 5;
+    box-shadow: 0 0 5em #000;
+}
+
+.regalo-delante--cinta{
+    position: absolute;
+    width: 100px;
+    height: 8px;
+    background: rgb(196, 144, 53);
+    align-self: center;
+    rotate: 90deg;
+    box-shadow: 0 1px 1px rgba(105, 1, 1,0.5);
+}
+
+.regalo-tapa{
+    position: absolute;
+    width: 0px;
+    height: 50px;
+    display: flex;
+    bottom: -0.1em;
+    z-index: 6;
+    border: none;
+    outline: none;
+    translate: -52.9px -60px;
+}
+
+.regalo-tapa--moño{
+    margin-left: 3px;
+    position: absolute;
+    width: 100px;
+    bottom: 3.25em;
+    align-self: center;
+}
+
+.regalo-tapa--caja{
+    position: absolute;
+    width: 105px;
+    height: 10px;
+    background: rgb(174, 0, 0);
+    bottom: 5.6em;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(105, 1, 1,0.5);
+}
+
+.regalo-tapa--cinta{
+    position: absolute;
+    width: 100px;
+    height: 8px;
+    background: rgb(196, 144, 53);
+    align-self: center;
+    rotate: 90deg;
+    left: 2.5px;
+    box-shadow: 0 1px 1px rgba(105, 1, 1,0.5);
+}
+
+
+.regalo-detras{
+    position: absolute;
+    width: 100px;
+    height: 43px;
+    background: rgb(36, 0, 0);
+    bottom: 4em;
+    display: flex;
+    border: none;
+    z-index: 4;
+}
+
+
+.regalo-tapa:focus{
+    translate: -30px -137px;
+    transition: 500ms;
+    transition-timing-function: ease-out;
+    transform-origin: bottom;
+    transform: rotate(75deg);
+}
+
+
+
+.fotodelante{
+    top: -21.1em;
+    position: absolute;
+    background-image: url(../img/fotodelante.png);
+    background-size: cover;
+    width: 100px;
+    height: 115px;
+    transform:scale(0.74, 0.75) rotatey(90deg);
+}
+
+
+
+
+.fotodetras{
+    bottom: .5em;
+    right: 0%;
+    left: 0%;
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    margin: auto;
+}
+
+
+
+.regalo-tapa:focus + .regalo-detras .fotodetras{
+    translate: 0 -265px;
+    transition: 2.5s;
+}
+
+.regalo-tapa:focus + .regalo-detras .fotodetras{
+    width: 100px;
+    height: 115px;
+    transform: scale(0.74, 0.75) rotatey(90deg);
+    transition-delay: 800ms;
+    transition-timing-function: cubic-bezier(.61,.06,.67,1); 
+    
+}
+
+
+.regalo-tapa:focus + .regalo-detras .fotodelante{
+    transform-origin: 50%;
+    transform: rotatey(0deg);
+    transform: scale(3.49, 3.5);
+    transition: 4s;
+    transition-delay: 3s;
+    box-shadow: 0 0 10px #000,
+    0 0 100em #000,0 0 100em #000;
+}
+
+
+@media screen and (min-width:500px){
+    
+.arbol{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/arbol.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+}

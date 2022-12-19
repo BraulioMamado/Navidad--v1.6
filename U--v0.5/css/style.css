@@ -1,0 +1,278 @@
+* {
+margin: 0;
+box-sizing: border-box;
+}
+
+/*BORRAR*/
+body {
+    background-color: #333;
+}
+/*BORRAR*/
+
+
+
+
+
+
+
+.logo-nav {
+    position: sticky;
+    top:0;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: #e7e7e7;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #9124CF;
+    z-index: 1000;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: #9A3AD1;
+    position: relative;
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+nav a{
+    display: flex;
+    justify-content: center;
+    margin:2.5px 0;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2em;
+    color: #e7e7e7 
+}
+
+nav a:hover{
+    color: #3F0062;
+}
+
+nav a i {
+    margin: 0 5px;
+}
+
+
+
+
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    background-image: url(../img/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-button {
+    font-size: 1em;
+    background-color: #9A3AD1;
+    border-radius: 0.5em;
+    border: 1px solid #e7e7e7;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    color: #e7e7e7;
+    padding: 3px 10px;
+}
+
+.hero-button:hover {
+    background-color: #7423a3;
+}
+
+.hero-logo {
+    font-family:'Lobster', cursive;
+    color: #e7e7e7;
+    font-size: 2em;
+}
+
+
+
+
+
+.pres {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/fondogif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    outline: 1px solid #e7e7e7;
+    z-index: 50;
+}
+
+.pres h2 {
+    margin-top: 1em;
+    font-size: 1em;
+    color:#e7e7e7;
+}
+
+.pres .mundomag {
+    text-align: center;
+    font-size: 2.3em;
+    color: #c8e47a;
+    text-shadow: 0 0 .5em  #d0f52e;
+    font-family: 'Lobster', cursive;
+    margin-bottom: .5em;
+}
+
+.pres .txt1{
+    font-family: 'Rubik', sans-serif;
+    color: #e7e7e7;
+    padding: 0 50px;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.pres .txt1 .negrita{
+    color: #c8e47a;
+    text-shadow: 0 0 .5em  #d0f52e;
+}
+
+.pres .txt1 .logo{
+    font-family: 'Lobster', cursive;
+    font-weight: 1;
+}
+
+
+
+
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    background-color: #9124CF;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px 20px;
+}
+
+.contact h3{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: #e7e7e7;
+    padding: 10px 20px;
+}
+
+.contact-form__textarea{
+    resize: none;
+    margin: 5px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #3F0062;
+    color:#fff ;
+}
+
+.contact-form__textarea::placeholder{
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+}
+
+.contact input{
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+    margin: 5px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #3F0062;
+}
+
+.contact input::placeholder{
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+}
+
+.contact input:focus{
+    background: linear-gradient(transparent, rgba(208, 245, 46, 0.5));
+    outline: none;
+}
+
+.contact textarea:focus{
+    background: linear-gradient(transparent, rgba(208, 245, 46, 0.5));
+    outline: none;
+}
+
+#contact-form__button {
+    background-color: #3F0062;
+    border: none;
+    border-radius: 0.5em;
+}
+
+#contact-form__button:hover{
+    background-color: #34064d;
+}
+
+#contact-form__button:focus {
+    background: linear-gradient(#2e0047, rgba(0,0,0, 0.8));
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    padding: 5px;
+    border-top: 1px solid #fff;
+}
+
+footer h4{
+    color: #969595;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+}
+
+.r {
+    font-weight: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.volver{
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+}
+
+.volver a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background: #3F0062;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 1em;
+    border: 1px solid #fff;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.5));
+}
+
+.volver a:hover{
+    transition: 250ms;
+    background: #7400b2;
+    font-size: 1.05em;
+}

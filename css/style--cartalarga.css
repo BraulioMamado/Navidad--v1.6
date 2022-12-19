@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/snow.gif);
+    background-repeat: repeat;
+    background-size: cover;
+}
+.flex {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/*BARRA DE NAVEGACIÓN*/
+
+header nav{
+    width: 100%;
+    height: 2.5em;
+    background-color: rgba(140, 140, 140, 0.1);
+    backdrop-filter: blur(3px);
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+}
+
+header nav a, h1 {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    align-self: center;
+    margin: auto;
+    display: flex;
+    font-family: 'Roboto Slab', serif;
+}
+
+header nav a i, h1 i {
+    font-size: 0.8em;
+    align-self: center;
+    margin: 0 5px;
+}
+
+header nav h1 {
+    font-size: 1.5em;
+}
+
+header nav a {
+    color: rgb(255, 255, 255);
+    font-weight: 1;
+}
+
+/*NOTA*/
+
+.container{
+    margin: 40px 20px 0 20px;
+    background-color: rgba(140, 140, 140, 0.1);
+    height: 80vh;
+    width: 250px;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.texto {
+    top: 50em;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.texto p{
+    font-size: 1.2em;
+    margin: 10px 20px;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+}
+
+.texto p b{
+    color: rgb(178, 0, 233);
+}
+
+.quieres{
+    width: 250px;
+}
+
+.brillo:first-child {
+    right: -5em;
+    top: 90%;
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    background: rgba(74, 74, 74,0.1);
+    rotate: 40deg;
+}
+
+.brillo:nth-child(2) {
+    right: -5em;
+    top: 81%;
+    position: absolute;
+    width: 500px;
+    height: 20px;
+    background: rgba(74, 74, 74, 0.1);
+    rotate: 40deg;
+}
+
+.brillo:nth-child(3) {
+    right: -5em;
+    top: 150%;
+    position: absolute;
+    width: 500px;
+    height: 20px;
+    background: rgba(74, 74, 74, 0.1);
+    rotate: 40deg;
+}
+
+.brillo:nth-child(4) {
+    right: -5em;
+    top: 150%;
+    position: absolute;
+    width: 500px;
+    height: 30px;
+    background: rgba(74, 74, 74, 0.1);
+    rotate: 40deg;
+}
+
+h2{
+    position: relative;
+    top: 45%;
+    text-align: center;
+    color: rgb(169, 169, 169);
+    font-size: 3em;
+    font-family: 'Neonderthaw', cursive;
+    letter-spacing: 2px;
+
+    animation-name: neon;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes neon {
+    0% {
+        filter: drop-shadow(0 0 10px #fff);
+    }
+    5% {
+        filter: drop-shadow(0 0 0 #fff); 
+    }
+    10% {
+        filter: drop-shadow(0 0 10px #fff);
+    }
+    100% {
+        filter: drop-shadow(0 0 10px #fff);
+    }
+}
+
+
+.container:hover{
+    margin: 20px 20px 0 20px;
+    width: 320px;
+    height:85vh;
+    transition: 1s;
+    animation-timing-function: ease;
+    background-color: rgba(209, 209, 209, 0.1);
+    border-radius: 1em;
+    overflow: hidden scroll;
+}
+
+.container:hover > .brillo:first-child{
+    translate: 0px -1000px;
+    transition: 1000ms;
+    background: rgba(115, 115, 115, 0.1);
+}
+
+.container:hover > .brillo:nth-child(2){
+    translate: 0px -1000px;
+    transition: 900ms;
+    background: rgba(115, 115, 115, 0.1);
+}
+
+.container:hover > .brillo:nth-child(3){
+    translate: 0px -400px;
+    transition: 900ms;
+    background: rgba(115, 115, 115, 0.1);
+}
+
+.container:hover > .brillo:nth-child(4){
+    translate: 0px -480px;
+    transition: 900ms;
+    background: rgba(115, 115, 115, 0.1);
+}
+
+.container:hover > h2{
+    translate: 0 -500px;
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.container:hover > .texto{
+    top: 0;
+    transition: 800ms;
+    transition-timing-function: ease-out;
+    transition-delay: 200ms;
+}
+
+
